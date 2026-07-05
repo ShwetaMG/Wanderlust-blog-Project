@@ -80,6 +80,8 @@ pipeline {
                         }
                     }
                 }
+            }
+        } 
                 
                 stage("Frontend env setup"){
                     steps {
@@ -90,8 +92,8 @@ pipeline {
                         }
                     }
                 }
-            }
-        }
+            
+        
         
         stage("Docker: Build Images"){
             steps{
@@ -115,7 +117,7 @@ pipeline {
                 }
             }
         }
-    }
+    
     post{
         success{
             archiveArtifacts artifacts: '*.xml', followSymlinks: false
@@ -125,4 +127,9 @@ pipeline {
             ]
         }
     }
+
+
 }
+}
+    
+                        
