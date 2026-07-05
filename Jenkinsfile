@@ -44,7 +44,6 @@ pipeline {
                 }
             }
         }
-
         stage("OWASP: Dependency check"){
             steps{
                 script{
@@ -80,9 +79,6 @@ pipeline {
                         }
                     }
                 }
-            }
-        } 
-                
                 stage("Frontend env setup"){
                     steps {
                         script{
@@ -92,19 +88,18 @@ pipeline {
                         }
                     }
                 }
-            
-        
-        
+            }
+        }
+                
         stage("Docker: Build Images"){
             steps{
                 script{
-                        dir('backend'){
-                            build("wanderlust-backend-beta","${params.BACKEND_DOCKER_TAG}","shwetamg20")
-                        }
-                    
-                        dir('frontend'){
-                            build("wanderlust-frontend-beta","${params.FRONTEND_DOCKER_TAG}","shwetamg20")
-                        }
+                    dir('backend'){
+                        build("wanderlust-backend-beta","${params.BACKEND_DOCKER_TAG}","shwetamg20")
+                    }
+                    dir('frontend'){
+                        build("wanderlust-frontend-beta","${params.FRONTEND_DOCKER_TAG}","shwetamg20")
+                    }
                 }
             }
         }
@@ -112,12 +107,12 @@ pipeline {
         stage("Docker: Push to DockerHub"){
             steps{
                 script{
-                     push("shwetamg20", "wanderlust-backend-beta", "${params.BACKEND_DOCKER_TAG}")
-                     push("shwetamg20", "wanderlust-frontend-beta", "${params.FRONTEND_DOCKER_TAG}"
+                    push("shwetamg20", "wanderlust-backend-beta", "${params.BACKEND_DOCKER_TAG}")
+                    push("shwetamg20", "wanderlust-frontend-beta", "${params.FRONTEND_DOCKER_TAG}")
                 }
             }
         }
-    
+    }
     post{
         success{
             archiveArtifacts artifacts: '*.xml', followSymlinks: false
@@ -127,9 +122,4 @@ pipeline {
             ]
         }
     }
-
-
 }
-}
-    
-                        
