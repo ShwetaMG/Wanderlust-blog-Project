@@ -1,4 +1,4 @@
-@Library('Shared') _
+@Library('shared-library') _
 pipeline {
     agent {label 'fighter'}
     
@@ -110,8 +110,8 @@ pipeline {
         stage("Docker: Push to DockerHub"){
             steps{
                 script{
-                    push("wanderlust-backend-beta","${params.BACKEND_DOCKER_TAG}","shwetamg20") 
-                    push("wanderlust-frontend-beta","${params.FRONTEND_DOCKER_TAG}","shwetamg20")
+                     push("shwetamg20", "wanderlust-backend-beta", "${params.BACKEND_DOCKER_TAG}")
+                     push("shwetamg20", "wanderlust-frontend-beta", "${params.FRONTEND_DOCKER_TAG}"
                 }
             }
         }
