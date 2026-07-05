@@ -1,4 +1,4 @@
-@Library('Shared') _
+@Library('shared-library') _
 pipeline {
     agent {label 'fighter'}
     
