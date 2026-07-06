@@ -22,7 +22,7 @@
 
 - <b>ArgoCD application for deployment on EKS</b>
 
-![ArgoCD Deployment](Images/ArgoCd-dashboard.png)
+![ArgoCD Deployment](Images\argo-app-connected.png)
 
 #
 ## Steps to implement the project:
@@ -152,8 +152,8 @@ chmod 777 /var/run/docker.sock
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
 
-![Application Deployed 1](REPLACE_WITH_YOUR_IMAGE)
-![Application Deployed 2](REPLACE_WITH_YOUR_IMAGE)
+![Application Deployed 1](Images/argo-app-connected.png)
+![Application Deployed 2](Images/ArgoCd-dashboard.png)
 
 - <b>Open port 31000 and 31100 on worker node and Access it on browser using public IP address</b>
 ```bash
@@ -165,7 +165,7 @@ chmod 777 /var/run/docker.sock
 
 - <b>Email Notification</b>
 
-![Email Notification Received(Images/Mail-notification.png)
+![Email Notification Received](Images/Mail-notification.png)
 
 #
 
