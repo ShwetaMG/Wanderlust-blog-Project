@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: shwetamg20/wanderlust-frontend-beta:v2.2
+          image: shwetamg20/wanderlust-frontend-beta:v2.1
           ports:
             - containerPort: 5173
 ---
