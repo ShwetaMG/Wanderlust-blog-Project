@@ -123,7 +123,7 @@ chmod 777 /var/run/docker.sock
   > [!Tip]
   > shweta-admin@wanderlust.ap-south-1.eksctl.io --> This should be your EKS Cluster Name.
 
-  ![ArgoCD Cluster Add]()Images/add-cluster-argocd.png
+  ![ArgoCD Cluster Add](Images/add-cluster-argocd.png)
   - <b> Once your cluster is added to argocd, go to argocd console <mark>Settings --> Clusters</mark> and verify it</b>
 
   ![ArgoCD Cluster Verify](Images/cluster-in-argo.png)
@@ -148,7 +148,7 @@ chmod 777 /var/run/docker.sock
 ![ArgoCD Auto Create Namespace 2](Images/argo-source-conn.png)
 ![ArgoCD Auto Create Namespace 2](Images/argo-dest-conn.png)
 ![ArgoCD Auto Create Namespace 2](Images/argo-app-connect.png)
-![ArgoCD Auto Create Namespace 2](Images/ArgoCd-dashboard.png)
+
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
 
