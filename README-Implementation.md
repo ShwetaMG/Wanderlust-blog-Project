@@ -14,15 +14,15 @@
 ### How pipeline will look after deployment:
 - <b>CI pipeline to build and push</b>
 
-![CI Pipeline](Images\CI-Pipeline.png)
+![CI Pipeline](Images/CI-Pipeline.png)
 
 - <b>CD pipeline to update application version</b>
 
-![CD Pipeline](Images\CD-Pipeline.png)
+![CD Pipeline](Images/CD-Pipeline.png)
 
 - <b>ArgoCD application for deployment on EKS</b>
 
-![ArgoCD Deployment](Images\ArgoCd-dashboard.png)
+![ArgoCD Deployment](Images/ArgoCd-dashboard.png)
 
 #
 ## Steps to implement the project:
@@ -34,62 +34,62 @@
 #
 - <b id="Sonar">After OWASP plugin is installed, Now move to <mark>Manage jenkins --> Tools</mark> (Jenkins master)</b>
 
-![Manage Jenkins Tools](Images\OWASP-dependency.png)
+![Manage Jenkins Tools](Images/OWASP-dependency.png)
 #
 - <b>Login to SonarQube server and create the credentials for jenkins to integrate with SonarQube</b>
   - Navigate to <mark>Administration --> Security --> Users --> Token</mark>
 
-  ![SonarQube Token Step 1](Images\sonar-qube-token-crea-1.png)
-  ![SonarQube Token Step 2](Images\sonar-token-crea-2.png)
+  ![SonarQube Token Step 1](Images/sonar-qube-token-crea-1.png)
+  ![SonarQube Token Step 2](Images/sonar-token-crea-2.png)
 
 #
 - <b>Now, go to <mark> Manage Jenkins --> credentials</mark> and add Sonarqube credentials:</b>
 
-![SonarQube Credentials in Jenkins](Images\sonarqube-credentials.png)
+![SonarQube Credentials in Jenkins](Images/sonarqube-credentials.png)
 #
 - <b>Go to <mark> Manage Jenkins --> Tools</mark> and search for SonarQube Scanner installations:</b>
 
-![SonarQube Scanner Tool Config](Images\Sonarqube-installation.png)
+![SonarQube Scanner Tool Config](Images/Sonarqube-installation.png)
 #
 - <b> Go to <mark> Manage Jenkins --> credentials</mark> and add Github credentials to push updated code from the pipeline:</b>
 
-![GitHub Credentials in Jenkins](Images\github-credentials.png)
+![GitHub Credentials in Jenkins](Images/github-credentials.png)
 
 > [!Note]
 > While adding github credentials add Personal Access Token in the password field.
 #
 - <b>Go to <mark> Manage Jenkins --> System</mark> and search for SonarQube installations:</b>
 
-![SonarQube Installation in System Config](Images\Sonarqube-installation.png)
+![SonarQube Installation in System Config](Images/Sonarqube-installation.png)
 #
 - <b>Now again, Go to <mark> Manage Jenkins --> System</mark> and search for Global Trusted Pipeline Libraries:</b>
 
-![Global Trusted Pipeline Libraries 1](Images\global-trusted-pipeline.png)
-![Global Trusted Pipeline Libraries 2](Images\global-trusted-pipeline-2.png)
+![Global Trusted Pipeline Libraries 1](Images/global-trusted-pipeline.png)
+![Global Trusted Pipeline Libraries 2](Images/global-trusted-pipeline-2.png)
 #
 - <b>Login to SonarQube server, go to <mark>Administration --> Webhook</mark> and click on create </b>
 
-![SonarQube Webhook 1](Images\sonarqube-webhook.png)
-![SonarQube Webhook 2](Images\sonar-qube-webhook-1.png)
+![SonarQube Webhook 1](Images/sonarqube-webhook.png)
+![SonarQube Webhook 2](Images/sonar-qube-webhook-1.png)
 #
 - <b>Now, go to github repository and under <mark>Automations</mark> directory update the <mark>instance-id</mark> field on both the <mark>updatefrontendnew.sh updatebackendnew.sh</mark> with the k8s worker's instance id</b>
 
-![Update Instance ID in Automation Scripts](Images\Autofiles.sh-modification.png)
+![Update Instance ID in Automation Scripts](Images/Autofiles.sh-modification.png)
 #
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
 
-![Docker Login Credentials](Images\dockerhub-credentials.png)
+![Docker Login Credentials](Images/dockerhub-credentials.png)
 #
 - <b>Create a <mark>Wanderlust-CI</mark> pipeline</b>
 
-![Wanderlust CI Pipeline](Images\CI-Creation.png)
+![Wanderlust CI Pipeline](Images/CI-Creation.png)
 
 #
 - <b>Create one more pipeline <mark>Wanderlust-CD</mark></b>
 
-![Wanderlust CD Pipeline 1](Images\CD-creation.png)
-![Wanderlust CD Pipeline 2](Images\CI-script.png)
-![Wanderlust CD Pipeline 3](Images\CD-script.png)
+![Wanderlust CD Pipeline 1](Images/CD-creation.png)
+![Wanderlust CD Pipeline 2](Images/CI-script.png)
+![Wanderlust CD Pipeline 3](Images/CD-script.png)
 #
 - <b>Provide permission to docker socket so that docker build and push command do not fail (Jenkins Worker)</b>
 ```bash
@@ -104,18 +104,18 @@ chmod 777 /var/run/docker.sock
 > [!Tip]
 > 52.66.65.178:31071--> This should be your argocd url
 
-  ![ArgoCD CLI Login]()Images\argo-terminal-login.png
+  ![ArgoCD CLI Login]()Images/argo-terminal-login.png
 
   - <b>Check how many clusters are available in argocd </b>
   ```bash
   argocd cluster list
   ```
-  ![ArgoCD Cluster List]()Images\cluster-list.png
+  ![ArgoCD Cluster List]()Images/cluster-list.png
   - <b>Get your cluster name</b>
   ```bash
   kubectl config get-contexts
   ```
-  ![Kubectl Contexts](Images\config-get-contex.png)
+  ![Kubectl Contexts](Images/config-get-contex.png)
   - <b>Add your cluster to argocd</b>
   ```bash
   argocd cluster add shweta-admin@wanderlust.ap-south-1.eksctl.io  --name wanderlust-eks-cluster
@@ -123,32 +123,32 @@ chmod 777 /var/run/docker.sock
   > [!Tip]
   > shweta-admin@wanderlust.ap-south-1.eksctl.io --> This should be your EKS Cluster Name.
 
-  ![ArgoCD Cluster Add]()Images\add-cluster-argocd.png
+  ![ArgoCD Cluster Add]()Images/add-cluster-argocd.png
   - <b> Once your cluster is added to argocd, go to argocd console <mark>Settings --> Clusters</mark> and verify it</b>
 
-  ![ArgoCD Cluster Verify](Images\cluster-in-argo.png)
+  ![ArgoCD Cluster Verify](Images/cluster-in-argo.png)
 #
 - <b>Go to <mark>Settings --> Repositories</mark> and click on <mark>Connect repo</mark> </b>
 
-![ArgoCD Connect Repo 1](Images\argo-conn1.png)
-![ArgoCD Connect Repo 2](Images\argo-conn2.png)
-![ArgoCD Connect Repo 3](Images\argo-conn3.png)
+![ArgoCD Connect Repo 1](Images/argo-conn1.png)
+![ArgoCD Connect Repo 2](Images/argo-conn2.png)
+![ArgoCD Connect Repo 3](Images/argo-conn3.png)
 
 > [!Note]
 > Connection should be successful
 
 - <b>Now, go to <mark>Applications</mark> and click on <mark>New App</mark></b>
 
-![ArgoCD New Application](Images\argo-app-setup.png)
+![ArgoCD New Application](Images/argo-app-setup.png)
 
 > [!Important]
 > Make sure to click on the <mark>Auto-Create Namespace</mark> option while creating argocd application
 
-![ArgoCD Auto Create Namespace 1](Images\argo-Auto-crea-namespace.png)
-![ArgoCD Auto Create Namespace 2](Images\argo-source-conn.png)
-![ArgoCD Auto Create Namespace 2](Images\argo-dest-conn.png)
-![ArgoCD Auto Create Namespace 2](Images\argo-app-connect.png)
-![ArgoCD Auto Create Namespace 2](Images\ArgoCd-dashboard.png)
+![ArgoCD Auto Create Namespace 1](Images/argo-Auto-crea-namespace.png)
+![ArgoCD Auto Create Namespace 2](Images/argo-source-conn.png)
+![ArgoCD Auto Create Namespace 2](Images/argo-dest-conn.png)
+![ArgoCD Auto Create Namespace 2](Images/argo-app-connect.png)
+![ArgoCD Auto Create Namespace 2](Images/ArgoCd-dashboard.png)
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
 
@@ -159,13 +159,13 @@ chmod 777 /var/run/docker.sock
 ```bash
 <worker-public-ip>:31000
 ```
-![Application Running 1](Images\ec2-node-port.png)
-![Application Running 2](Images\app-on-browser.png)
-![Application Running 3](Images\application.png)
+![Application Running 1](Images/ec2-node-port.png)
+![Application Running 2](Images/app-on-browser.png)
+![Application Running 3](Images/application.png)
 
 - <b>Email Notification</b>
 
-![Email Notification Received(Images\Mail-notification.png)
+![Email Notification Received(Images/Mail-notification.png)
 
 #
 
