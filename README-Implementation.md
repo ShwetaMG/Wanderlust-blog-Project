@@ -22,7 +22,7 @@
 
 - <b>ArgoCD application for deployment on EKS</b>
 
-![ArgoCD Deployment](Images\argo-app-connected.png)
+![ArgoCD Deployment](Images/argo-app-connected.png)
 
 #
 ## Steps to implement the project:
@@ -104,13 +104,13 @@ chmod 777 /var/run/docker.sock
 > [!Tip]
 > 52.66.65.178:31071--> This should be your argocd url
 
-  ![ArgoCD CLI Login]()Images/argo-terminal-login.png
+  ![ArgoCD CLI Login](Images/argo-terminal-login.png)
 
   - <b>Check how many clusters are available in argocd </b>
   ```bash
   argocd cluster list
   ```
-  ![ArgoCD Cluster List]()Images/cluster-list.png
+  ![ArgoCD Cluster List](Images/cluster-list.png)
   - <b>Get your cluster name</b>
   ```bash
   kubectl config get-contexts
