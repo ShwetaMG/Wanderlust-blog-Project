@@ -1,5 +1,5 @@
 ## Follow below steps to set up the Infrastructure on AWS to deploy the application.
-This guide covers everything you need to set up the infrastructure and tools **before** implementing the CI/CD pipeline. For the actual pipeline creation and deployment steps, see [README-Implementation.md](./README-Implementation.md).
+This guide covers everything you need to set up the infrastructure and tools **before** implementing the CI/CD pipeline. For the actual pipeline creation and deployment steps, see [README.md](./README.md).
 
 ## Tech stack used in this project:
 - GitHub (Code)
