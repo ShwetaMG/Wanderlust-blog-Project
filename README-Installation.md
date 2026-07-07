@@ -392,5 +392,4 @@ kubectl get secret --namespace prometheus stable-grafana -o jsonpath="{.data.adm
 ![Grafana Dashboard 1](Images/grafana-dashboard.png)
 
 #
-
-➡️ Once setup is complete, head over to [README-Implementation.md](./README-implementation.md) to build and run the CI/CD pipeline.
+➡️ Once setup is complete, head over to [README-Implementation.md](./README-Implementation.md) to build and run the CI/CD pipeline.
