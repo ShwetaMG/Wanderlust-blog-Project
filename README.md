@@ -4,7 +4,9 @@ WanderLust is a simple MERN travel blog website ✈
 
 ![Preview Image](https://github.com/krishnaacharyaa/wanderlust/assets/116620586/17ba9da6-225f-481d-87c0-5d5a010a9538)
 #
-
+## Pipeline flow diagram 
+![pipeline flow digram](Assets\DevSecOps+GitOps.gif)
+#
 # Steps for Implementation
 
 ### Follow the below steps to deploy three tier MERN stack application on EKS cluster.
