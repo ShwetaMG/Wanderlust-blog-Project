@@ -4,9 +4,6 @@ WanderLust is a simple MERN travel blog website ✈
 
 ![Preview Image](https://github.com/krishnaacharyaa/wanderlust/assets/116620586/17ba9da6-225f-481d-87c0-5d5a010a9538)
 #
-### <mark>Project Deployment Flow:</mark>
-<img src="https://github.com/DevMadhup/Wanderlust-Mega-Project/blob/main/Assets/DevSecOps%2BGitOps.gif" />
-
 
 # Steps for Implementation
 
