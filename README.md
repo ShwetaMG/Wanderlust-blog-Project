@@ -196,4 +196,4 @@ For setup and installation of all the underlying tools, refer back to [README-In
 
 
 > [!Note]
-> completed this jenkin deployment by referring ShubamLonde youtube "Jenkin oneshort video" please go through yotube vedio for any doubts and clarifications.
+> completed this jenkin deployment by referring ShubamLonde youtube "Jenkin oneshort video" please go through yotube channel video for any doubts and clarifications.
