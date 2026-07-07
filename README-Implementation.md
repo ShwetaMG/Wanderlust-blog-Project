@@ -1,6 +1,13 @@
-# Wanderlust Mega Project - steps for Implementation
+# Wanderlust - Installation & Setup Guide 🌍✈️
 
-### In this demo, we will see how to deploy an end to end three tier MERN stack application on EKS cluster.
+WanderLust is a simple MERN travel blog website ✈
+
+![Preview Image](https://github.com/krishnaacharyaa/wanderlust/assets/116620586/17ba9da6-225f-481d-87c0-5d5a010a9538)
+#
+
+# Wanderlust Mega Project - Steps for Implementation
+
+### Follow the below steps to deploy three tier MERN stack application on EKS cluster.
 #
 
 > [!Note]
@@ -147,7 +154,6 @@ chmod 777 /var/run/docker.sock
 ![ArgoCD Auto Create Namespace 1](Images/argo-Auto-crea-namespace.png)
 ![ArgoCD Auto Create Namespace 2](Images/argo-source-conn.png)
 ![ArgoCD Auto Create Namespace 2](Images/argo-dest-conn.png)
-![ArgoCD Auto Create Namespace 2](Images/argo-app-connect.png)
 
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
@@ -166,6 +172,21 @@ chmod 777 /var/run/docker.sock
 - <b>Email Notification</b>
 
 ![Email Notification Received](Images/Mail-notification.png)
+
+#
+
+- Now, view the Dashboard in Grafana
+  
+![Grafana Dashboard 2](Images/grafana-5.png) 
+![Grafana Dashboard 1](Images/grafana-4.png)
+![Grafana Dashboard 3](Images/grafana-6.png)
+
+#
+## Clean Up
+- <b id="Clean">Delete eks cluster</b>
+```bash
+eksctl delete cluster --name=wanderlust --region=us-west-1
+```
 
 #
 
