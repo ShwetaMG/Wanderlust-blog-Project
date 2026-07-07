@@ -1,4 +1,4 @@
-## Follow below steps to set up the Infrastructure on AWS to deply the application.
+## Follow below steps to set up the Infrastructure on AWS to deploy the application.
 This guide covers everything you need to set up the infrastructure and tools **before** implementing the CI/CD pipeline. For the actual pipeline creation and deployment steps, see [README-implementation.md](./README-Implementation.md).
 
 ## Tech stack used in this project:
@@ -281,7 +281,7 @@ trivy --version
 
   - <b>Search for <mark>App password</mark> and create a app password for jenkins</b>
   ![App Password Step 1](Images/email-pass-1.2.png)
-  ![App Password Step 2](Images/email-pass-1.2.png)
+  ![App Password Step 2](Images\email-pass-1.3.png)
   
 #
 - <b> Once, app password is create and go back to jenkins <mark>Manage Jenkins --> Credentials</mark> to add username and password for email notification</b>
