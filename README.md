@@ -11,7 +11,7 @@ WanderLust is a simple MERN travel blog website ✈
 #
 
 > [!Note]
-> This assumes you've already completed all the tool installation and setup steps in [README-installation.md](./README-Installation.md) (Jenkins Master/Worker, EKS cluster, ArgoCD, SonarQube, Trivy, Email notification, Helm monitoring). This document covers configuring the pipeline itself and deploying the application.
+> This assumes you've already completed all the tool installation and setup steps in [README-Installation.md](./README-Installation.md) (Jenkins Master/Worker, EKS cluster, ArgoCD, SonarQube, Trivy, Email notification, Helm monitoring). This document covers configuring the pipeline itself and deploying the application.
 
 ### <mark>Project Deployment Flow:</mark>
 <img src="https://github.com/DevMadhup/Wanderlust-Mega-Project/blob/main/Assets/DevSecOps%2BGitOps.gif" />
