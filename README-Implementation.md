@@ -193,3 +193,7 @@ eksctl delete cluster --name=wanderlust --region=us-west-1
 That's it! Your Wanderlust MERN application is now deployed on AWS EKS with a full DevSecOps pipeline: GitHub → Jenkins CI (OWASP + SonarQube + Trivy) → Docker → Jenkins CD → ArgoCD → EKS, with Prometheus/Grafana monitoring and email notifications.
 
 For setup and installation of all the underlying tools, refer back to [README-Installation.md](./README-Installation.md).
+
+
+> [!Note]
+> completed this jenkin deployment by referring ShubamLonde youtube "Jenkin oneshort video" please go through yotube vedio for any doubts and clarifications.
