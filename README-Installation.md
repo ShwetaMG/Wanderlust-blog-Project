@@ -281,7 +281,7 @@ trivy --version
 
   - <b>Search for <mark>App password</mark> and create a app password for jenkins</b>
   ![App Password Step 1](Images/email-pass-1.2.png)
-  ![App Password Step 2](Images\email-pass-1.3.png)
+  ![App Password Step 2](Images/email-pass-1.3.png)
   
 #
 - <b> Once, app password is create and go back to jenkins <mark>Manage Jenkins --> Credentials</mark> to add username and password for email notification</b>
