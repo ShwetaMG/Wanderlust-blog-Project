@@ -1,4 +1,4 @@
-# Wanderlust - Installation & Setup Guide 🌍✈️
+# Wanderlust - A travel blog app🌍✈️
 
 WanderLust is a simple MERN travel blog website ✈
 
